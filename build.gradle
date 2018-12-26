@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ch.api'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //mysql驱动
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.17'
+
+    //springboot 依赖
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.10.RELEASE")
+
+//spring data jpa 注意： 不要引入错了，要找的组是springboot的依赖。如下面这条注释的是错误的。
+//因为我们使用了SpringBoot，所以采用的库，也要是springboot组下的。
+//compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.11.3.RELEASE'
+
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.5.10.RELEASE'
+
+}
