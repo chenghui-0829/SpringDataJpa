@@ -1,22 +1,21 @@
 package com.ch.api.bean;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity(name = "user")
 public class UserInfo {
 
-    private int uid;
+    private String uid;
     private String name;
+    private String tel;
 
     @Id
-    @GeneratedValue
-    public int getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
@@ -28,11 +27,11 @@ public class UserInfo {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "uid=" + uid +
-                ", name='" + name + '\'' +
-                '}';
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 }

@@ -16,4 +16,9 @@ public class UserServiceImp implements UserService {
 
         userDao.save(info);
     }
+
+    @Override
+    public boolean existsUser(String tel) {
+        return userDao.existsUserInfoByTel(tel);
+    }
 }

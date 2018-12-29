@@ -12,7 +12,16 @@ public class CjInfo {
     private String cjzt;
     private String jpnr;
     private String cytj;
-    private Date creatTime;
+    private String fqUser;
+    private String creatTime;
+
+    public String getFqUser() {
+        return fqUser;
+    }
+
+    public void setFqUser(String fqUser) {
+        this.fqUser = fqUser;
+    }
 
     @Id
     @GeneratedValue
@@ -48,11 +57,11 @@ public class CjInfo {
         this.cytj = cytj;
     }
 
-    public Date getCreatTime() {
+    public String getCreatTime() {
         return creatTime;
     }
 
-    public void setCreatTime(Date creatTime) {
+    public void setCreatTime(String creatTime) {
         this.creatTime = creatTime;
     }
 }

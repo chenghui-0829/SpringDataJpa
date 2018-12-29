@@ -5,6 +5,9 @@ import com.ch.api.dao.CjDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class CjServiceImp implements CjService {
     @Autowired
@@ -14,5 +17,10 @@ public class CjServiceImp implements CjService {
     public void save(CjInfo cjInfo) {
 
         cjDao.save(cjInfo);
+    }
+
+    @Override
+    public ArrayList<CjInfo> findAll() {
+        return (ArrayList<CjInfo>) cjDao.findAll();
     }
 }
