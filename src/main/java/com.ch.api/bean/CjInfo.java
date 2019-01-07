@@ -1,9 +1,7 @@
 package com.ch.api.bean;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.Date;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "cj_info")
 public class CjInfo {
@@ -14,6 +12,16 @@ public class CjInfo {
     private String cytj;
     private String fqUser;
     private String creatTime;
+    private Set<CjUser> cjUsers;
+
+    @OneToMany(mappedBy = "cjInfo")
+    public Set<CjUser> getCjUsers() {
+        return cjUsers;
+    }
+
+    public void setCjUsers(Set<CjUser> cjUsers) {
+        this.cjUsers = cjUsers;
+    }
 
     public String getFqUser() {
         return fqUser;

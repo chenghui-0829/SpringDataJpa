@@ -23,4 +23,9 @@ public class CjServiceImp implements CjService {
     public ArrayList<CjInfo> findAll() {
         return (ArrayList<CjInfo>) cjDao.findAll();
     }
+
+    @Override
+    public CjInfo findCjInfoByCjid(int cjid) {
+        return cjDao.findOne(cjid);
+    }
 }

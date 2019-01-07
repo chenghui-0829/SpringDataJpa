@@ -9,4 +9,7 @@ public interface UserDao extends Repository<UserInfo, String> {
 
     Boolean existsUserInfoByTel(String tel);
 
+    UserInfo findUserInfoByUid(String uid);
+
+
 }

@@ -10,4 +10,6 @@ public interface CjService {
     void save(CjInfo cjInfo);
 
     ArrayList<CjInfo> findAll();
+
+    CjInfo findCjInfoByCjid(int cjid);
 }
