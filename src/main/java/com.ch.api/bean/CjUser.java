@@ -6,7 +6,6 @@ import java.io.Serializable;
 @Embeddable
 public class CjUser implements Serializable {
 
-    private int id;
     private String time;
     private UserInfo userInfo;
 
@@ -24,13 +23,5 @@ public class CjUser implements Serializable {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

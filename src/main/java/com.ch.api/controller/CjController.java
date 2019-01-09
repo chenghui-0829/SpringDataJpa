@@ -12,6 +12,7 @@ import com.ch.api.bean.CjInfo;
 import com.ch.api.bean.CjListEntity;
 import com.ch.api.bean.CjUser;
 import com.ch.api.bean.ResultInfo;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -86,7 +87,8 @@ public class CjController {
         List<CjUser> cjUserSet = cjInfo.getCjUsers();
         cjUserSet.add(cjUser);
         cjInfo.setCjUsers(cjUserSet);
-
+        cjInfo.setIsJoin("1");
+        cjService.save(cjInfo);
         result.setCode(200);
         result.setMsg("参与成功");
         result.setData("");
