@@ -7,5 +7,5 @@ public interface UserService {
 
     boolean existsUser(String tel);
 
-    UserInfo findUserInfoByUid(String uid);
+    UserInfo findUserInfoByTel(String tel);
 }

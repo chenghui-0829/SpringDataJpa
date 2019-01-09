@@ -1,11 +1,9 @@
 package com.ch.api.bean;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.io.Serializable;
-import java.util.List;
 
-@Entity(name = "cj_info")
-public class CjInfo implements Serializable {
+public class CjListEntity implements Serializable {
 
     private int cjId;
     private String cjzt;
@@ -13,38 +11,21 @@ public class CjInfo implements Serializable {
     private String cytj;
     private String fqUser;
     private String creatTime;
-    private String isJoin;
-    private List<CjUser> cjUsers;
 
-    @ElementCollection
-    public List<CjUser> getCjUsers() {
-        return cjUsers;
+    public CjListEntity() {
     }
 
-    public void setCjUsers(List<CjUser> cjUsers) {
-        this.cjUsers = cjUsers;
-    }
-
-    public String getFqUser() {
-        return fqUser;
-    }
-
-    public void setFqUser(String fqUser) {
+    public CjListEntity(int cjId, String cjzt, String jpnr, String cytj, String fqUser, String creatTime) {
+        this.cjId = cjId;
+        this.cjzt = cjzt;
+        this.jpnr = jpnr;
+        this.cytj = cytj;
         this.fqUser = fqUser;
+        this.creatTime = creatTime;
     }
 
-    @Id
-    @GeneratedValue
     public int getCjId() {
         return cjId;
-    }
-
-    public String getIsJoin() {
-        return isJoin;
-    }
-
-    public void setIsJoin(String isJoin) {
-        this.isJoin = isJoin;
     }
 
     public void setCjId(int cjId) {
@@ -73,6 +54,14 @@ public class CjInfo implements Serializable {
 
     public void setCytj(String cytj) {
         this.cytj = cytj;
+    }
+
+    public String getFqUser() {
+        return fqUser;
+    }
+
+    public void setFqUser(String fqUser) {
+        this.fqUser = fqUser;
     }
 
     public String getCreatTime() {

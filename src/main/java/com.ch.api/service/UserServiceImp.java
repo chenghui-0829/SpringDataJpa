@@ -23,7 +23,7 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public UserInfo findUserInfoByUid(String uid) {
-        return userDao.findUserInfoByUid(uid);
+    public UserInfo findUserInfoByTel(String tel) {
+        return userDao.findUserInfoByTel(tel);
     }
 }

@@ -1,10 +1,12 @@
 package com.ch.api.bean;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity(name = "user")
-public class UserInfo {
+public class UserInfo implements Serializable {
 
     private String uid;
     private String name;
@@ -33,5 +35,14 @@ public class UserInfo {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "uid='" + uid + '\'' +
+                ", name='" + name + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
     }
 }

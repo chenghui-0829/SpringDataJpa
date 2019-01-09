@@ -1,27 +1,15 @@
 package com.ch.api.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-@Entity(name = "cj_user")
-public class CjUser {
+@Embeddable
+public class CjUser implements Serializable {
 
     private int id;
     private String time;
     private UserInfo userInfo;
-    private CjInfo cjInfo;
 
-    @ManyToOne
-    @JoinColumn(name = "cjid")
-    public CjInfo getCjInfo() {
-        return cjInfo;
-    }
-
-    public void setCjInfo(CjInfo cjInfo) {
-        this.cjInfo = cjInfo;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "uid")
     public UserInfo getUserInfo() {
         return userInfo;
     }
@@ -38,8 +26,6 @@ public class CjUser {
         this.time = time;
     }
 
-    @Id
-    @GeneratedValue
     public int getId() {
         return id;
     }

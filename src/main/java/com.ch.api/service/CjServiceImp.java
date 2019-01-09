@@ -1,6 +1,7 @@
 package com.ch.api.service;
 
 import com.ch.api.bean.CjInfo;
+import com.ch.api.bean.CjListEntity;
 import com.ch.api.dao.CjDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,11 @@ public class CjServiceImp implements CjService {
 
     @Override
     public CjInfo findCjInfoByCjid(int cjid) {
-        return cjDao.findOne(cjid);
+        return cjDao.findCjInfoByCjId(cjid);
+    }
+
+    @Override
+    public List<CjListEntity> getCjList() {
+        return cjDao.getCjList();
     }
 }
