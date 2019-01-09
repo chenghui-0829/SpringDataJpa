@@ -1,6 +1,6 @@
 package com.ch.api.controller;
 
-import com.ch.api.bean.*;
+import com.ch.api.bean.UserInfo;
 import com.ch.api.service.CjService;
 import com.ch.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.ch.api.bean.CjInfo;
+import com.ch.api.bean.CjListEntity;
+import com.ch.api.bean.CjUser;
+import com.ch.api.bean.ResultInfo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class CjController {
